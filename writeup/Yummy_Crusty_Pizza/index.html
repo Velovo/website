@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>test1212 - writeup</title>
+<head>
+	<link rel="stylesheet" href="../../../home_css/index.css">
+</head>
+</head>
+<body><pre><center>
+
+<div class="test1212">
+<a href="/" style="text-decoration:none;">
+@@@@@@@  @@@@@@@@   @@@@@@   @@@@@@@    @@@   @@@@@@     @@@   @@@@@@   
+@@@@@@@  @@@@@@@@  @@@@@@@   @@@@@@@   @@@@  @@@@@@@@   @@@@  @@@@@@@@  
+  @@!    @@!       !@@         @@!    @@@!!       @@@  @@@!!       @@@  
+  !@!    !@!       !@!         !@!      !@!      @!@     !@!      @!@   
+  @!!    @!!!:!    !!@@!!      @!!      @!@     !!@      @!@     !!@    
+  !!!    !!!!!:     !!@!!!     !!!      !@!    !!:       !@!    !!:     
+  !!:    !!:            !:!    !!:      !!:   !:!        !!:   !:!      
+  :!:    :!:           !:!     :!:      :!:  :!:         :!:  :!:       
+   ::     :: ::::  :::: ::      ::      :::  :: :::::    :::  :: :::::  
+   :     : :: ::   :: : :       :        ::  :: : :::     ::  :: : :::  
+                                                                        
+                                                                        aka arth
+</a>
+</div>
+<div class="banner">
+<a href="/">Home</a> - <a href="/about">About</a> - <a href="/writeup">Writeup</a> - <a href="/contact">Contact</a>
+</div>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">OSINT Competition time! WIN a Quarterly VIP Subscription to <a href="https://twitter.com/hackthebox_eu?ref_src=twsrc%5Etfw">@hackthebox_eu</a> See the replies to this tweet for the challenge description and rules/scope of the challenge<br>CC: <a href="https://twitter.com/0xLegacyy?ref_src=twsrc%5Etfw">@0xLegacyy</a> for help with some of this challenge and adding an Easter egg, can you find it? <a href="https://twitter.com/hashtag/HTB?src=hash&amp;ref_src=twsrc%5Etfw">#HTB</a> <a href="https://twitter.com/hashtag/OSINT?src=hash&amp;ref_src=twsrc%5Etfw">#OSINT</a> (1/3)</p>&mdash; sinfulz (@s1nfulz) <a href="https://twitter.com/s1nfulz/status/1364529059787534336?ref_src=twsrc%5Etfw">February 24, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+1.I googled Yummy Crusty Pizza, not many great result.
+Dorked for exact result result with "" and found the <a href="https://www.instagram.com/yummycrustypizza/">instagram account.</a>
+Got a flag:
+SINFULZ{We're_n0_str4ng3rs_t0_l0v3}
+
+2.Linked with the instagram account, a website: <a href="https://yummycrustypizza.com">https://yummycrustypizza.com</a>
+The database page is said removed from public.
+Went to internet archive to see if there was a save of the page (there was)
+<a href="https://web.archive.org/web/20210222081058/https://yummycrustypizza.com/database.html">https://web.archive.org/web/20210222081058/https://yummycrustypizza.com/database.html</a>
+
+3. I tried to bruteforce all password and got "only" the first one in the list: sinfulz:password5
+
+4. Went looking by hand on pastebin where the DB could have been posted but did not found much.
+Went back on the website, got down the page, and went on other social media of yummycrustypizza. 
+In the twitter account, they link a <a href="https://pastebin.com/BvatWyq8">pastebin</a>.
+In the pastebin is linked another <a href="https://cryptobin.co/j5h5l4y8">bin</a> which serves to unlock the "secret recipe";
+It's a cryptobin which unlock with the password we found earlier: password5
+
+5. In the <a href="https://cryptobin.co/j5h5l4y8">cryptobin</a> is the second flag:
+SINFULZ{DUMPED_SECRETS_ON_PUBLIC_SITES_ARE_REAL}
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+body {
+	font-size: 14px;
+	font-family: ubuntu mono;
+	background-color: black;
+	color: white;
+	/*margin: 0;*/
+}
+.banner {
+	display: inline;
+	font-size: 18px;
+}
+
+a:link {color: white;}      /* unvisited link */
+a:visited {color: white;}   /* visited link */
+a:hover {color: white; opacity: 0.5;}     /* mouse over link */
+a:active {color: white;}    /* selected link */

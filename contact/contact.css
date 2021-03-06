@@ -1,0 +1,9 @@
+.email {
+	font-size: 22px;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.email:hover {
+	opacity: 0.5;
+}
